@@ -17,7 +17,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
                 </thead>
                 <tbody>
                 { 
-            wantcooks.map((wantcook,idx)=><Wantcook key={idx} handlepreparing={handlepreparing} wantcook={wantcook} idx={idx+1}></Wantcook>)
+            wantcooks.map((wantcook,idx)=><Wantcook key={wantcook.recipe_id} handlepreparing={handlepreparing} wantcook={wantcook} idx={idx+1}></Wantcook>)
                 }
                 </tbody>
             </table>
@@ -36,7 +36,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
                 </thead>
                 <tbody>
                 { 
-            currentcooks.map((currentcook,idx)=><Currentcook key={idx} currentcook={currentcook}></Currentcook>)
+            currentcooks.map((currentcook,idx)=><Currentcook key={currentcook.recipe_id} currentcook={currentcook} idx={idx+1}></Currentcook>)
                 }
                 <tr>
                     <td></td>
