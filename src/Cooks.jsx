@@ -9,6 +9,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
             <table className='border-separate border-spacing-2 text-[#282828B3] text-base text-center'>
                 <thead>
                 <tr>
+                    <th></th>
                     <th>Name</th>
                     <th>Time</th>
                     <th>Calories</th>
@@ -16,7 +17,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
                 </thead>
                 <tbody>
                 { 
-            wantcooks.map((wantcook,idx)=><Wantcook key={idx} handlepreparing={handlepreparing} wantcook={wantcook}></Wantcook>)
+            wantcooks.map((wantcook,idx)=><Wantcook key={idx} handlepreparing={handlepreparing} wantcook={wantcook} idx={idx+1}></Wantcook>)
                 }
                 </tbody>
             </table>
@@ -27,6 +28,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
             <table className='border-separate border-spacing-4 text-[#282828B3] text-base text-center'>
                 <thead>
                 <tr>
+                    <th></th>
                     <th>Name</th>
                     <th>Time</th>
                     <th>Calories</th>

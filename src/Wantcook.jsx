@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-const Wantcook = ({wantcook,handlepreparing}) => {
+const Wantcook = ({wantcook,handlepreparing,idx}) => {
     const {recipe_name,preparing_time,calories}=wantcook;
     return (
                 <tr>
+                    <td>{idx}</td>
                     <td>{recipe_name} </td>
                     <td>{preparing_time} minute</td>
                     <td>{calories} calories</td>
@@ -16,6 +17,7 @@ const Wantcook = ({wantcook,handlepreparing}) => {
 };
 Wantcook.propTypes={
     wantcook: PropTypes.object,
-    handlepreparing:PropTypes.func
+    handlepreparing:PropTypes.func,
+    idx: PropTypes.number
 }
 export default Wantcook;
