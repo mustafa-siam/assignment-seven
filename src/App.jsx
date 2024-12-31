@@ -4,10 +4,17 @@ import './App.css'
 import Header from './component/Header'
 import Recipes from './component/Recipes'
 import Cooks from './Cooks';
+import Toast from './Toast';
 
 function App() {
 const [wantcooks,setwantcooks]=useState([]);
+const [toastVisible, setToastVisible] = useState(false);
 const handlewantcook=(recipe)=>{
+  if(wantcooks.find(cook => cook.recipe_id === recipe.recipe_id)){
+    setToastVisible(true);
+    setTimeout(() => setToastVisible(false), 3000);
+    return;
+  }
    const newwantcook=[...wantcooks,recipe];
    setwantcooks(newwantcook);
 }
@@ -35,6 +42,7 @@ const [currentcooks,setcurrentcooks]=useState([]);
           <Cooks handlepreparing={handlepreparing} totalcalorie={totalcalorie} totaltime={totaltime} currentcooks={currentcooks} wantcooks={wantcooks}></Cooks>
          </div>
     </div>
+    {toastVisible && <Toast></Toast>}
     </>
   )
 }
