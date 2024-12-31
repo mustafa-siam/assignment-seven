@@ -35,7 +35,7 @@ const [currentcooks,setcurrentcooks]=useState([]);
 
   return (
     <>
-    <div className='md:mx-10 mx-4'>
+    <div className='md:mx-10 mx-2 my-6'>
          <Header></Header>
          <div className='md:flex gap-6'>
           <Recipes handlewantcook={handlewantcook}></Recipes>

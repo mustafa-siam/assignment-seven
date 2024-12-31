@@ -4,7 +4,7 @@ import Currentcook from './Currentcook';
 const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) => {
     return (
         <div className="md:w-1/3 shadow-2xl p-3 rounded-2xl"> 
-            <h2 className="text-2xl font-semibold pb-3 border-b-2">Want to cook: 0{wantcooks.length}</h2>
+            <h2 className="text-2xl font-semibold pb-3 border-b-2 text-center">Want to cook: 0{wantcooks.length}</h2>
             <div className='bg-slate-100 my-8 rounded-2xl py-3'>      
             <table className='border-separate border-spacing-2 text-[#282828B3] text-base text-center'>
                 <thead>
@@ -23,7 +23,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
             </table>
             </div>
             <div>
-                <h2 className="text-2xl font-semibold pb-3 border-b-2">Currently cooking: {currentcooks.length}</h2>
+                <h2 className="text-2xl font-semibold pb-3 border-b-2 text-center">Currently cooking: {currentcooks.length}</h2>
                 <div className='bg-slate-100 my-8 rounded-2xl py-3'>      
             <table className='border-separate border-spacing-4 text-[#282828B3] text-base text-center'>
                 <thead>
@@ -39,6 +39,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
             currentcooks.map((currentcook,idx)=><Currentcook key={currentcook.recipe_id} currentcook={currentcook} idx={idx+1}></Currentcook>)
                 }
                 <tr>
+                    <td></td>
                     <td></td>
                     <td>Total Time={totaltime}</td>
                     <td>Total Calories={totalcalorie}</td>

@@ -93,7 +93,7 @@ const Header = () => {
             <div className="my-10 text-white">
             <div className="bg-[url('/image/banner.png')] bg-no-repeat bg-cover bg-center min-h-screen  rounded-[32px] overflow-hidden flex flex-col justify-center items-center space-y-7">
             
-            <h2 className="text-center text-5xl font-bold">Discover an exceptional cooking <br />class tailored for you!</h2>
+            <h2 className="text-center md:text-5xl text-4xl font-bold">Discover an exceptional cooking <br />class tailored for you!</h2>
             <p className="text-center text-lg font-normal">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding <br /> problems to become an exceptionally well world-class Programmer.</p>
             <div className="flex justify-center gap-8">
                 <button className="bg-[#0BE58A] text-black py-4 px-7 rounded-[50px]">Explore Now</button>
