@@ -17,6 +17,8 @@ const [currentcooks,setcurrentcooks]=useState([]);
     const handlepreparing=(wantcook,time,calorie)=>{
             const newcurrentcook=[...currentcooks,wantcook];
             setcurrentcooks(newcurrentcook);
+   const filtercook= wantcooks.filter(cook=>cook.recipe_id!==wantcook.recipe_id);
+   setwantcooks(filtercook)
       const newtime=totaltime+time;
       settotaltime(newtime);
       const newcalorie=totalcalorie+calorie;
