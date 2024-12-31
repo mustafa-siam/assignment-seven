@@ -3,7 +3,7 @@ import Wantcook from './Wantcook';
 import Currentcook from './Currentcook';
 const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) => {
     return (
-        <div className="md:w-1/3 shadow-2xl p-3 rounded-2xl"> 
+        <div className="md:w-1/3 shadow-2xl md:p-3 rounded-2xl"> 
             <h2 className="text-2xl font-semibold pb-3 border-b-2 text-center">Want to cook: 0{wantcooks.length}</h2>
             <div className='bg-slate-100 my-8 rounded-2xl py-3'>      
             <table className='border-separate border-spacing-2 text-[#282828B3] text-base text-center'>
@@ -23,7 +23,7 @@ const Cooks = ({wantcooks,handlepreparing,currentcooks,totaltime,totalcalorie}) 
             </table>
             </div>
             <div>
-                <h2 className="text-2xl font-semibold pb-3 border-b-2 text-center">Currently cooking: {currentcooks.length}</h2>
+                <h2 className="text-2xl font-semibold md:pb-3 border-b-2 text-center">Currently cooking: {currentcooks.length}</h2>
                 <div className='bg-slate-100 my-8 rounded-2xl py-3'>      
             <table className='border-separate border-spacing-4 text-[#282828B3] text-base text-center'>
                 <thead>
